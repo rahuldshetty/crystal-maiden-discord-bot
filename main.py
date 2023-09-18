@@ -2,6 +2,7 @@ import os
 
 import discord
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 
 from bot import reply
 
@@ -45,4 +46,5 @@ async def on_message(message:discord.Message):
 
 
 if __name__ == "__main__":
+    keep_alive()
     client.run(TOKEN)
